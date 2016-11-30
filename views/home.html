@@ -1,0 +1,13 @@
+<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!!</p>
+<p><a href="#/edit" class="btn">Create Note</a></p>
+<h3>All notes:</h3>
+<ul>
+    <li ng-repeat="note in vm.GetAll">
+        {{note.subject}} {{note.version}} 
+        - <a href="#" ng-click="vm.viewNote(note.id)">Delete</a> 
+        - <a href="#" ng-click="vm.deleteNote(note.id)">Delete</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="#/" class="btn btn-primary">Logout</a></p>
